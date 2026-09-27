@@ -1,0 +1,90 @@
+{
+  "Banana": {
+    "healthy": {
+      "display_name": "Sain",
+      "description": "Aucun signe de maladie détecté sur cette feuille de bananier.",
+      "bio_treatment": "Aucun traitement nécessaire. Continuez à surveiller régulièrement et maintenez une bonne hygiène de la parcelle (retirez les feuilles mortes, évitez la surpopulation)."
+    },
+    "cordana": {
+      "display_name": "Tache foliaire de Cordana",
+      "description": "Une maladie fongique causant des lésions ovales brunes avec des halos jaunes sur les feuilles de bananier, apparaissant généralement sur les feuilles plus âgées.",
+      "bio_treatment": "Retirez et détruisez les feuilles atteintes pour réduire la propagation des spores. Améliorez la circulation de l'air en espaçant les plants et en élaguant le feuillage en excès. Un spray d'huile de neem peut aider à freiner la propagation fongique comme option biologique."
+    },
+    "pestalotiopsis": {
+      "display_name": "Tache foliaire de Pestalotiopsis",
+      "description": "Une maladie fongique produisant des taches gris-brun avec des bords foncés sur les feuilles de bananier, souvent sur les pointes et les bords des feuilles, aggravée par une forte humidité.",
+      "bio_treatment": "Élaguez et retirez rapidement le matériel foliaire infecté. Évitez l'arrosage par le haut qui maintient les feuilles mouillées. Un spray biologique dilué à base de neem ou d'ail peut réduire la propagation fongique."
+    },
+    "sigatoka": {
+      "display_name": "Tache foliaire de Sigatoka",
+      "description": "Une maladie fongique grave provoquant des stries qui se transforment en grandes taches brun-noir nécrosées sur les feuilles de bananier, réduisant considérablement le rendement si elle n'est pas traitée.",
+      "bio_treatment": "Retirez et détruisez immédiatement les feuilles fortement infectées pour ralentir la propagation. Améliorez le drainage et l'espacement des plants pour réduire l'humidité. Les fongicides organiques à base de cuivre sont une option courante — consultez un agent de vulgarisation agricole local pour les produits et doses approuvés."
+    }
+  },
+  "Cacao": {
+    "Sana": {
+      "display_name": "Sain",
+      "description": "Aucun signe de maladie détecté sur cette feuille ou cabosse de cacao.",
+      "bio_treatment": "Aucun traitement nécessaire. Continuez à surveiller régulièrement et maintenez une bonne hygiène de la plantation."
+    },
+    "Fito": {
+      "display_name": "Phytophthora (Pourriture noire des cabosses)",
+      "description": "Une maladie grave de type fongique (Phytophthora palmivora) causant des lésions sombres et gorgées d'eau sur les cabosses qui noircissent et se momifient. Peut également provoquer des chancres sur les tiges et la brûlure des feuilles.",
+      "bio_treatment": "Retirez et détruisez immédiatement toutes les cabosses infectées. Améliorez le drainage et élaguez la canopée pour une meilleure circulation de l'air. Appliquez un fongicide organique à base de cuivre ou des agents de biocontrôle à base de Trichoderma. Assurez un espacement adéquat entre les arbres pour réduire l'humidité."
+    },
+    "Monilia": {
+      "display_name": "Moniliose (Pourriture givrée des cabosses)",
+      "description": "Une maladie fongique très destructrice (Moniliophthora roreri) provoquant un jaunissement prématuré des cabosses, suivi de taches nécrotiques brunes et d'une masse distinctive de spores blanches à brunes recouvrant la surface de la cabosse.",
+      "bio_treatment": "Retirez et enterrez toutes les cabosses infectées à au moins 50 cm de profondeur. L'élimination hebdomadaire des cabosses symptomatiques est essentielle pendant la saison des pluies. Élaguez les arbres pour améliorer la pénétration de la lumière et la circulation de l'air. Appliquez des bio-fongicides contenant du Trichoderma ou du Bacillus subtilis. L'association avec des arbres d'ombrage peut réduire la pression des maladies."
+    }
+  },
+  "Cassava": {
+    "Cassava___healthy": {
+      "display_name": "Sain",
+      "description": "Aucun signe de maladie détecté sur cette feuille de manioc.",
+      "bio_treatment": "Aucun traitement nécessaire. Continuez à surveiller régulièrement la parcelle et maintenez de bonnes pratiques agronomiques."
+    },
+    "Cassava___bacterial_blight": {
+      "display_name": "Bactériose du manioc",
+      "description": "Une maladie bactérienne grave (Xanthomonas axonopodis pv. manihotis) provoquant des taches anguleuses avec des halos jaunes, la brûlure des feuilles et un exsudat sur les tiges. Les infections sévères entraînent le flétrissement et le dépérissement.",
+      "bio_treatment": "Retirez et brûlez immédiatement le matériel végétal infecté. Utilisez des boutures saines certifiées. Pratiquez la rotation des cultures — évitez de planter du manioc dans le même champ pendant au moins 2 saisons. Les sprays organiques à base de cuivre peuvent aider à gérer la propagation aux premiers stades."
+    },
+    "Cassava___brown_streak_disease": {
+      "display_name": "Mosaïque brune du manioc (CBSD)",
+      "description": "Une maladie virale (virus de la mosaïque brune du manioc) provoquant des motifs jaune-brun sur les feuilles et des stries brunes nécrosées sur les tiges. La nécrose des racines rend les tubercules impropres à la consommation.",
+      "bio_treatment": "Aucun traitement curatif — la prévention est essentielle. Utilisez du matériel de plantation certifié exempt de virus. Retirez et détruisez immédiatement les plants infectés pour réduire la propagation. Contrôlez les populations de mouches blanches (le vecteur) avec des sprays organiques à base de neem. Plantez des variétés tolérantes si disponibles dans votre région."
+    },
+    "Cassava___green_mottle": {
+      "display_name": "Marbrure verte du manioc",
+      "description": "Une maladie virale provoquant une marbrure verte légère à sévère et des motifs de mosaïque sur les feuilles de manioc, parfois avec une déformation des feuilles et une croissance réduite.",
+      "bio_treatment": "Utilisez des boutures certifiées sans maladie pour la plantation. Retirez et détruisez les plants gravement infectés. Contrôlez les mouches blanches et autres vecteurs d'insectes avec des répulsifs organiques à base de neem ou d'ail. Maintenez l'hygiène de la parcelle en éliminant les plants de manioc spontanés."
+    },
+    "Cassava___mosaic_disease": {
+      "display_name": "Mosaïque du manioc (CMD)",
+      "description": "Une maladie virale dévastatrice (virus de la mosaïque du manioc) provoquant une mosaïque sévère, l'enroulement des feuilles, le rabougrissement et une perte de rendement importante. Transmise par les mouches blanches.",
+      "bio_treatment": "Utilisez uniquement des boutures de tige certifiées exemptes de virus provenant de sources fiables. Retirez et brûlez immédiatement tous les plants infectés. Contrôlez les populations de mouches blanches avec un spray d'huile de neem (5 ml d'huile de neem par litre d'eau avec un savon doux). Plantez des variétés résistantes ou tolérantes. Pratiquez l'assainissement de la parcelle — éliminez tous les débris végétaux après la récolte."
+    }
+  },
+  "Maize": {
+    "Healthy": {
+      "display_name": "Sain",
+      "description": "Aucun signe de maladie détecté sur cette feuille de maïs.",
+      "bio_treatment": "Aucun traitement nécessaire. Continuez à inspecter régulièrement et maintenez une fertilisation équilibrée pour une santé optimale des cultures."
+    },
+    "Blight": {
+      "display_name": "Brûlure nordique des feuilles de maïs",
+      "description": "Une maladie fongique (Exserohilum turcicum) provoquant de grandes lésions allongées en forme de cigare, gris-vert à beige sur les feuilles de maïs. Les infections sévères peuvent brûler toute la canopée et réduire considérablement le rendement.",
+      "bio_treatment": "Pratiquez la rotation des cultures — évitez de planter du maïs dans le même champ plusieurs saisons consécutives. Choisissez des variétés hybrides tolérantes. Appliquez de l'huile de neem ou des bio-fongicides à base de Trichoderma dès les premiers symptômes. Assurez une nutrition équilibrée (surtout en potassium) pour améliorer la résistance des plantes."
+    },
+    "Common_Rust": {
+      "display_name": "Rouille commune",
+      "description": "Une maladie fongique (Puccinia sorghi) produisant des pustules ovales à allongées brun cannelle sur les deux faces des feuilles. Les pustules se rompent pour libérer des spores de rouille poudreuses. Les infections sévères provoquent la mort prématurée des feuilles.",
+      "bio_treatment": "Plantez des variétés de maïs tolérantes à la rouille lorsqu'elles sont disponibles. Appliquez des fongicides organiques à base de soufre ou de l'huile de neem dès l'apparition des pustules. Évitez la fertilisation azotée excessive qui peut augmenter la sensibilité. Assurez un bon drainage et un espacement adéquat des plants."
+    },
+    "Gray_Leaf_Spot": {
+      "display_name": "Tache grise des feuilles",
+      "description": "Une maladie fongique grave (Cercospora zeae-maydis) provoquant des lésions rectangulaires caractéristiques, grises à beiges, parallèles aux nervures des feuilles. Les lésions s'étendent et se fusionnent, entraînant une brûlure étendue des feuilles.",
+      "bio_treatment": "Pratiquez la rotation des cultures avec des cultures non hôtes (soja, légumineuses) pendant au moins une saison. Utilisez des variétés hybrides résistantes. Appliquez des fongicides organiques à base de cuivre ou de soufre de manière préventive pendant les premiers stades de croissance. Enfouissez les résidus de culture par labour pour réduire l'inoculum hivernant."
+    }
+  }
+}

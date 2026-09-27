@@ -1,0 +1,23 @@
+flutter_launcher_icons:
+  image_path: "assets/images/circle_like_app_logo.png"
+
+  # Android adaptive icon (rounded/circular)
+  android: true
+  adaptive_icon_foreground: "assets/images/circle_like_app_logo.png"
+  adaptive_icon_background: "#FFFFFF"
+
+  # iOS
+  ios: true
+
+  # Web
+  web:
+    generate: true
+    image_path: "assets/images/circle_like_app_logo.png"
+
+  # Windows
+  windows:
+    generate: true
+    image_path: "assets/images/circle_like_app_logo.png"
+
+  # Remove default background and use our circular logo
+  min_sdk_android: 21

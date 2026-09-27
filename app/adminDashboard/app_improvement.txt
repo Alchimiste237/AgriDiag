@@ -1,0 +1,31 @@
+
+### *2. ADMIN DASHBOARD UI - "AgriDiag CM Monitor"*
+Goal: For NGO/Gov/Agronomist. Data insights and outbreak monitoring. Needs internet.
+
+#### *A. Main Dashboard / Overview*
+[Total Farmers: 1,240] [Total Scans: 8,920] [Alerts: 3]
+
+[MAP] <- Biggest element
+Heatmap of disease outbreaks. Red = High Late Blight in Chikun LGA
+
+[Top 5 Diseases This Month]
+1. Maize - Fall Armyworm: 34%
+2. Tomato - Early Blight: 21%
+...
+Use Leaflet + Heatmap.js
+
+#### *B. Analytics Page*
+1. *Charts*: Bar chart of Diseases by Crop, Line chart of outbreaks over time
+2. *Filters*: By State, LGA, Date Range, Crop
+3. *Export*: "Download CSV/PDF Report" button
+
+#### *C. Farmer & Scan Details Table*
+| FarmerID | Name | Village | Crop | Disease | Date | Status |
+| F_0012 | Musa | Rigasa | Tomato| Blight | 2-Aug| Synced |
+Click a row → See the actual leaf photo + GPS pin
+
+#### *D. Alerts Page*
+Auto-flag: "Spike: 50+ Fall Armyworm cases in Kaduna North in last 7 days"
+So admin can send advisory SMS
+
+*Key UI Principles*: Data-dense, Maps, Charts, Export, Search. Desktop first.

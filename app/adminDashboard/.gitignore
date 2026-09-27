@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output (GitHub Pages build is produced by Actions, not committed)
+dist/
+build/
+.vite/
+
+# Local env files (only .env.example is tracked)
+.env
+.env.local
+.env.*.local
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store

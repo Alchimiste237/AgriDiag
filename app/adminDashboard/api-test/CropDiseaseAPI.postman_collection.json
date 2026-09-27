@@ -1,0 +1,290 @@
+{
+  "info": {
+    "name": "Crop Disease Detector — API Tests",
+    "_postman_id": "crop-disease-api-tests",
+    "description": "Test Login and Farmer Scans endpoints via Supabase REST API.\n\nSetup:\n1. Open this collection in Postman or import into Thunder Client.\n2. Set the collection variables (supabase_url, supabase_anon_key, user_email, user_password) in the Variables tab.\n3. Run 'Login' first to get the access token (auto-saved to variable).\n4. Run 'Get Farmer Scans' — it uses the token automatically.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "supabase_url",
+      "value": "https://umvdhcmxmhpgdxseyfaa.supabase.co",
+      "type": "string"
+    },
+    {
+      "key": "supabase_anon_key",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVtdmRoY214bWhwZ2R4c2V5ZmFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUyNzc5MzUsImV4cCI6MjEwMDg1MzkzNX0.EgHJLF3Zhe7rFQQLpQ-Kbwo6aENqlzCTdInB9XTa9b4",
+      "type": "string"
+    },
+    {
+      "key": "user_email",
+      "value": "admin@example.com",
+      "type": "string"
+    },
+    {
+      "key": "user_password",
+      "value": "your-password-here",
+      "type": "string"
+    },
+    {
+      "key": "access_token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "description": "Authentication endpoints",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{user_email}}\",\n  \"password\": \"{{user_password}}\"\n}"
+            },
+            "url": {
+              "raw": "{{supabase_url}}/auth/v1/token?grant_type=password",
+              "host": ["{{supabase_url}}"],
+              "path": ["auth", "v1", "token"],
+              "query": [
+                {
+                  "key": "grant_type",
+                  "value": "password"
+                }
+              ]
+            },
+            "description": "Sign in with email and password using Supabase Auth.\n\nOn success, saves the access_token to the collection variable so subsequent requests use it automatically.\n\nExpected response: 200 OK with { access_token, token_type, expires_in, user }"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();",
+                  "if (pm.response.code === 200 && response.access_token) {",
+                  "    pm.collectionVariables.set('access_token', response.access_token);",
+                  "    console.log('✅ Token saved. You can now run \"Get Farmer Scans\".');",
+                  "} else {",
+                  "    console.log('❌ Login failed:', response.error_description || response.msg || 'Unknown error');",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scans",
+      "description": "Farmer scan data endpoints",
+      "item": [
+        {
+          "name": "Get Farmer Scans",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{supabase_url}}/rest/v1/scans?select=*&order=device_timestamp.desc",
+              "host": ["{{supabase_url}}"],
+              "path": ["rest", "v1", "scans"],
+              "query": [
+                {
+                  "key": "select",
+                  "value": "*"
+                },
+                {
+                  "key": "order",
+                  "value": "device_timestamp.desc"
+                }
+              ]
+            },
+            "description": "Fetch all farmer scans from the Supabase scans table, ordered newest first.\n\nRequires: Run 'Login' first to obtain the access_token.\n\nExpected response: 200 OK with JSON array of scan records."
+          }
+        },
+        {
+          "name": "Get Farmer Scans (with filters)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{supabase_url}}/rest/v1/scans?select=*&order=device_timestamp.desc&limit=50",
+              "host": ["{{supabase_url}}"],
+              "path": ["rest", "v1", "scans"],
+              "query": [
+                {
+                  "key": "select",
+                  "value": "*"
+                },
+                {
+                  "key": "order",
+                  "value": "device_timestamp.desc"
+                },
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            },
+            "description": "Fetch latest 50 farmer scans. Edit query params to filter by disease_label, crop_species, or farmer_name."
+          }
+        },
+        {
+          "name": "Get Scans by Disease",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{supabase_url}}/rest/v1/scans?select=*&disease_label=eq.sigatoka&order=device_timestamp.desc",
+              "host": ["{{supabase_url}}"],
+              "path": ["rest", "v1", "scans"],
+              "query": [
+                {
+                  "key": "select",
+                  "value": "*"
+                },
+                {
+                  "key": "disease_label",
+                  "value": "eq.sigatoka"
+                },
+                {
+                  "key": "order",
+                  "value": "device_timestamp.desc"
+                }
+              ]
+            },
+            "description": "Fetch scans filtered by disease label. Change 'sigatoka' to another disease label as needed."
+          }
+        },
+        {
+          "name": "Insert Test Scan",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              },
+              {
+                "key": "Prefer",
+                "value": "return=representation"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"device_farmer_id\": \"AGD-TEST01\",\n  \"farmer_name\": \"Test Farmer\",\n  \"farmer_village\": \"Chikun\",\n  \"farmer_phone\": \"+2348012345678\",\n  \"crop_species\": \"plantain\",\n  \"disease_label\": \"sigatoka\",\n  \"confidence\": 0.87,\n  \"latitude\": 10.5325,\n  \"longitude\": 7.4264,\n  \"state\": \"Kaduna\",\n  \"lga\": \"Chikun\",\n  \"device_timestamp\": \"2026-08-24T12:00:00Z\"\n}"
+            },
+            "url": {
+              "raw": "{{supabase_url}}/rest/v1/scans",
+              "host": ["{{supabase_url}}"],
+              "path": ["rest", "v1", "scans"]
+            },
+            "description": "Insert a test farmer scan into the scans table.\n\nRequires: Run 'Login' first to obtain the access_token.\nThe Prefer header returns the inserted row in the response.\n\nEdit the body to test different values. Required fields: disease_label, confidence, device_timestamp.\n\nExpected response: 201 Created with the inserted scan record."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Farmers",
+      "description": "Farmer registry endpoints",
+      "item": [
+        {
+          "name": "Get All Farmers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "apikey",
+                "value": "{{supabase_anon_key}}"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{access_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{supabase_url}}/rest/v1/farmers?select=*&order=created_at.desc",
+              "host": ["{{supabase_url}}"],
+              "path": ["rest", "v1", "farmers"],
+              "query": [
+                {
+                  "key": "select",
+                  "value": "*"
+                },
+                {
+                  "key": "order",
+                  "value": "created_at.desc"
+                }
+              ]
+            },
+            "description": "Fetch all farmers from the farmers table."
+          }
+        }
+      ]
+    }
+  ]
+}

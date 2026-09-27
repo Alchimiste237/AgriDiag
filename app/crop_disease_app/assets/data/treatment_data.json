@@ -1,0 +1,90 @@
+{
+  "Banana": {
+    "healthy": {
+      "display_name": "Healthy",
+      "description": "No signs of disease detected on this banana leaf.",
+      "bio_treatment": "No treatment needed. Keep monitoring regularly and maintain good field hygiene (remove dead leaves, avoid overcrowding)."
+    },
+    "cordana": {
+      "display_name": "Cordana Leaf Spot",
+      "description": "A fungal disease causing oval brown lesions with yellow halos on banana leaves, usually starting on older leaves.",
+      "bio_treatment": "Remove and destroy affected leaves to reduce spore spread. Improve airflow by spacing plants and pruning excess foliage. Neem oil spray can help suppress fungal spread as an organic option."
+    },
+    "pestalotiopsis": {
+      "display_name": "Pestalotiopsis Leaf Spot",
+      "description": "A fungal disease producing grey-brown spots with dark borders on banana leaves, often on leaf tips and edges, worsened by high humidity.",
+      "bio_treatment": "Prune and remove infected leaf material promptly. Avoid overhead watering that keeps leaves wet. A diluted neem oil or garlic-based organic spray can reduce fungal spread."
+    },
+    "sigatoka": {
+      "display_name": "Sigatoka Leaf Spot",
+      "description": "A serious fungal disease causing streaks that develop into large brown-black necrotic patches on banana leaves, significantly reducing yield if untreated.",
+      "bio_treatment": "Remove and destroy heavily infected leaves immediately to slow spread. Improve field drainage and spacing to reduce humidity around plants. Organic copper-based fungicides are a common bio-treatment option — consult a local agricultural extension agent for locally approved products and dosage."
+    }
+  },
+  "Cacao": {
+    "Sana": {
+      "display_name": "Healthy",
+      "description": "No signs of disease detected on this cacao leaf or pod.",
+      "bio_treatment": "No treatment needed. Continue regular monitoring and maintain good orchard hygiene."
+    },
+    "Fito": {
+      "display_name": "Phytophthora (Black Pod Rot)",
+      "description": "A severe fungal-like disease (Phytophthora palmivora) causing dark, water-soaked lesions on pods that turn black and mummify. Can also cause stem cankers and leaf blight.",
+      "bio_treatment": "Remove and destroy all infected pods immediately. Improve drainage and prune canopy for better airflow. Apply organic copper-based fungicide or Trichoderma-based bio-control agents. Ensure proper spacing between trees to reduce humidity."
+    },
+    "Monilia": {
+      "display_name": "Moniliasis (Frosty Pod Rot)",
+      "description": "A highly destructive fungal disease (Moniliophthora roreri) causing premature yellowing of pods followed by brown necrotic spots and a distinctive white to brown fuzzy spore mass covering the pod surface.",
+      "bio_treatment": "Remove and bury all infected pods at least 50 cm deep. Weekly removal of symptomatic pods is critical during wet season. Prune trees to improve light penetration and air circulation. Apply organic bio-fungicides containing Trichoderma or Bacillus subtilis. Intercropping with shade trees can reduce disease pressure."
+    }
+  },
+  "Cassava": {
+    "Cassava___healthy": {
+      "display_name": "Healthy",
+      "description": "No signs of disease detected on this cassava leaf.",
+      "bio_treatment": "No treatment needed. Continue regular field monitoring and maintain good agronomic practices."
+    },
+    "Cassava___bacterial_blight": {
+      "display_name": "Cassava Bacterial Blight",
+      "description": "A serious bacterial disease (Xanthomonas axonopodis pv. manihotis) causing angular leaf spots with yellow halos, blighting, and stem exudate. Severe infections lead to wilting and dieback.",
+      "bio_treatment": "Remove and burn infected plant material immediately. Use disease-free planting cuttings from certified sources. Practice crop rotation — avoid planting cassava in the same field for at least 2 seasons. Copper-based organic sprays can help manage spread during early stages."
+    },
+    "Cassava___brown_streak_disease": {
+      "display_name": "Cassava Brown Streak Disease",
+      "description": "A viral disease (Cassava brown streak virus) causing yellow-brown blotchy patterns on leaves and brown necrotic streaking on stems. Root necrosis makes tubers inedible.",
+      "bio_treatment": "No curative treatment — prevention is key. Use certified virus-free planting material. Remove and destroy infected plants immediately to reduce virus spread. Control whitefly populations (the vector) using neem-based organic sprays. Plant tolerant varieties if available in your area."
+    },
+    "Cassava___green_mottle": {
+      "display_name": "Cassava Green Mottle",
+      "description": "A viral disease causing mild to severe green mottling and mosaic patterns on cassava leaves, sometimes with leaf distortion and reduced growth.",
+      "bio_treatment": "Use certified disease-free cuttings for planting. Remove and destroy severely infected plants. Control whitefly and other insect vectors with neem oil or garlic-based organic repellents. Maintain field hygiene by removing volunteer cassava plants."
+    },
+    "Cassava___mosaic_disease": {
+      "display_name": "Cassava Mosaic Disease",
+      "description": "A devastating viral disease (Cassava mosaic virus) causing severe mosaic patterning, leaf curl, stunting, and significant yield loss. Spread by whiteflies.",
+      "bio_treatment": "Use only certified virus-free stem cuttings from reliable sources. Remove and burn all infected plants immediately. Control whitefly populations with neem oil spray (5 ml neem oil per liter of water with mild soap). Plant resistant/tolerant varieties. Practice field sanitation — remove all plant debris after harvest."
+    }
+  },
+  "Maize": {
+    "Healthy": {
+      "display_name": "Healthy",
+      "description": "No signs of disease detected on this maize leaf.",
+      "bio_treatment": "No treatment needed. Continue regular scouting and maintain balanced fertilization for optimal crop health."
+    },
+    "Blight": {
+      "display_name": "Northern Corn Leaf Blight",
+      "description": "A fungal disease (Exserohilum turcicum) causing large, elongated, cigar-shaped gray-green to tan lesions on maize leaves. Severe infections can blight the entire canopy and reduce yield significantly.",
+      "bio_treatment": "Rotate crops — avoid planting maize in the same field for consecutive seasons. Choose tolerant hybrid varieties. Apply neem oil or Trichoderma-based bio-fungicides at first sign of symptoms. Ensure balanced nutrition (especially potassium) to improve plant resistance."
+    },
+    "Common_Rust": {
+      "display_name": "Common Rust",
+      "description": "A fungal disease (Puccinia sorghi) producing oval to elongated cinnamon-brown pustules on both leaf surfaces. Pustules rupture to release powdery rust spores. Severe infections cause premature leaf death.",
+      "bio_treatment": "Plant rust-tolerant maize varieties when available. Apply sulfur-based organic fungicides or neem oil at first appearance of pustules. Avoid excessive nitrogen fertilization which can increase susceptibility. Ensure good field drainage and adequate plant spacing."
+    },
+    "Gray_Leaf_Spot": {
+      "display_name": "Gray Leaf Spot",
+      "description": "A serious fungal disease (Cercospora zeae-maydis) causing distinctive rectangular, gray-to-tan lesions that run parallel to leaf veins. Lesions expand and coalesce, leading to extensive leaf blighting.",
+      "bio_treatment": "Practice crop rotation with non-host crops (soybeans, legumes) for at least one season. Use resistant hybrid varieties. Apply organic copper or sulfur-based fungicides preventatively during early growth stages. Bury crop residue through plowing to reduce overwintering inoculum."
+    }
+  }
+}

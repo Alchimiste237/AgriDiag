@@ -1,0 +1,17 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/circle_like_app_logo.png
+
+  # Android
+  android_12:
+    color: "#FFFFFF"
+    image: assets/images/circle_like_app_logo.png
+
+  # iOS
+  ios: true
+
+  # Web
+  web: true
+
+  # Full screen mode for immersive splash
+  fullscreen: true

@@ -1,0 +1,30 @@
+# ---- Repo-level: unrelated material that must never be committed ----
+rapport/
+training/
+*.docx
+*.pptx
+~$*
+UML_diagrams.*
+
+# ---- OS / editor junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+key.properties
+**/*.keystore
+**/*.jks
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-error.log*

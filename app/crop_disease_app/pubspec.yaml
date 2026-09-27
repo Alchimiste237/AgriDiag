@@ -1,0 +1,56 @@
+name: crop_disease_app
+description: Multi-crop disease detector — Banana, Cacao, Cassava, Maize
+publish_to: 'none'
+version: 0.2.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  camera: ^0.10.5+9
+  tflite_flutter: ^0.12.1
+  image: ^4.1.7
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.2
+  connectivity_plus: ^5.0.2
+  dio: ^5.4.1
+  provider: ^6.1.2
+  uuid: ^4.3.3
+  flutter_tts: ^3.8.5
+  geolocator: ^13.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  test: ^1.30.0
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Automatic crop recognition model
+    - assets/models/crop_classifier/crop_classifier.tflite
+    - assets/models/crop_classifier/crop_labels.txt
+    # Crop disease models and labels
+    - assets/models/Banana/model.tflite
+    - assets/models/Banana/labels.txt
+    - assets/models/Cacao/model.tflite
+    - assets/models/Cacao/labels.txt
+    - assets/models/cassava/model.tflite
+    - assets/models/cassava/labels.txt
+    - assets/models/maize/model.tflite
+    - assets/models/maize/labels.txt
+    # Treatment data
+    - assets/data/treatment_data.json
+    - assets/data/treatment_data_fr.json
+    # Branding
+    - assets/images/full_logo.png
+    - assets/images/circle_like_app_logo.png
+    # Onboarding hero background
+    - assets/images/onboarding_background.png
