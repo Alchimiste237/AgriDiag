@@ -7,4 +7,20 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: process.env.VITE_BASE || '/',
+  build: {
+    rollupOptions: {
+      output: {
+        // Split the heavy vendor code so React, charts, maps and the
+        // Supabase client load in parallel and cache independently.
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('recharts') || id.includes('d3-')) return 'charts';
+            if (id.includes('leaflet')) return 'maps';
+            if (id.includes('@supabase')) return 'supabase';
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
 });

@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Alchimiste237/AgriDiag/actions/workflows/deploy-dashboard.yml"><img src="https://github.com/Alchimiste237/AgriDiag/actions/workflows/deploy-dashboard.yml/badge.svg" alt="Dashboard deploy status" /></a>
+</p>
+
+<p align="center">
   <a href="docs/README_nontechnical.md">Non-technical guide</a> ·
   <a href="app/adminDashboard/SETUP.md">Dashboard setup</a> ·
   <a href="app/crop_disease_app/README_crop_detector.md">Model training</a>
